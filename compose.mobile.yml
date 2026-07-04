@@ -1,0 +1,21 @@
+# mobile-user-pl — Jan Kowalski's phone joined to the virtual internet.
+# The SMS app reads the virtual carrier's inbox; served as phone.jan.pl via the
+# net-user-pl proxy. Needs net-user-pl up (creates `netpl` and the SMS gateway).
+services:
+  phone:
+    image: python:3.13-slim
+    working_dir: /app
+    environment:
+      SMS_URL: http://sms-gateway:9810
+      PHONE_OWNER: jan
+      PHONE_MSISDN: "+48500100200"
+    volumes:
+      - ./phone:/app:ro
+      - ../net-user-pl/twinlib.py:/opt/twin/twinlib.py:ro
+    command: python app.py
+    networks: [netpl]
+
+networks:
+  netpl:
+    external: true
+    name: netpl
