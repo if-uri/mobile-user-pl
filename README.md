@@ -2,11 +2,11 @@
 
 The **SMS app on the handset** of an average citizen, part of the isolated
 digital twin. It shows the inbox from the virtual carrier (the `sms-gateway` in
-[net-user-pl](https://github.com/if-uri/net-user-pl)) — so a human reads the
+[net-user-pl](https://github.com/digitaltwin-run/net-user-pl)) — so a human reads the
 one-time bank code here, and an automat can read the very same inbox over the
 mesh to complete a login exactly as a person would.
 
-Trio: [net-user-pl](https://github.com/if-uri/net-user-pl) (network) · [pc-user-pl](https://github.com/if-uri/pc-user-pl) (computer) · **mobile-user-pl** (phone). Orchestrated by `pc1`.
+Trio: [net-user-pl](https://github.com/digitaltwin-run/net-user-pl) (network) · [pc-user-pl](https://github.com/digitaltwin-run/pc-user-pl) (computer) · **mobile-user-pl** (phone). Orchestrated by [`pc1`](https://github.com/digitaltwin-run/pc1).
 
 ## Service
 
